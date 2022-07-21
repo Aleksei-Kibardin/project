@@ -16,7 +16,6 @@ class UserService {
         if(xhr.status == 200 && xhr.readyState == 4 ){
             result = true;
         }  else{
-            result = xhr.response;
             console.log(xhr.status)
         }
         return result;
