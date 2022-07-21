@@ -5,7 +5,7 @@ class UserService {
     }
 
 
-    authenticate_user(){
+    static authenticate_user(){
         let data = 'login: ' + this.username + 'password: ' + this.password;
         let xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://examples.com/api/user/authenticate?username=');
