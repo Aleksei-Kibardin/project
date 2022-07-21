@@ -28,7 +28,9 @@ const log = document.querySelector('#login'),
 user = document.querySelector('#username'),
 pass = document.querySelector('#password');
 
+
+
 log.addEventListener(click, ()=>{
-UserService.authenticate_user(user, pass);
-if(res == true) document.location.href = '/home'; else alert(res.error);
+    UserService.authenticate_user(user, pass);
+    if(res == true) document.location.href = '/home'; else alert(res.error);
 });
