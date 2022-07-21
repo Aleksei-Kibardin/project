@@ -2,15 +2,15 @@ class UserService {
     constructor(username, password) {
         this.username = username;
         this.password = password;
-        this.data = 'login: ' + this.username + 'password: ' + this.password;
     }
 
 
     authenticate_user(){
+        let data = 'login: ' + this.username + 'password: ' + this.password;
         let xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://examples.com/api/user/authenticate?username=');
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send(this.data)
+        xhr.send(data)
         let result = false;
         
         if(xhr.status == 200 && xhr.readyState == 4 ){
@@ -22,6 +22,8 @@ class UserService {
         return result;
     }
 }
+
+
 const log = document.querySelector('#login'),
 user = document.querySelector('#username'),
 pass = document.querySelector('#password');
